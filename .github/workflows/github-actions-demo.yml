@@ -9,11 +9,13 @@ jobs:
       - run: echo "🍏 Lo stato del job è ${{ job.status }}."
   Test:
       runs-on: ubuntu-latest
+      needs: Build
       steps:
         - run: echo "Test"      
         - run: echo "🍏 Lo stato del job è ${{ job.status }}."
   Deploy:
       runs-on: ubuntu-latest
+      needs: Test
       steps:
         - run: echo "Deploy"
         - run: echo "🍏 Lo stato del job è ${{ job.status }}."    
