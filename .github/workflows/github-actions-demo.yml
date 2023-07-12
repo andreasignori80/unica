@@ -16,3 +16,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 Lo stato del job è ${{ job.status }}."
+    Stampa-Orario:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "date::$(date +'%Y-%m-%d')"
+    
