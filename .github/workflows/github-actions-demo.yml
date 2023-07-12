@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 Lo stato del job è ${{ job.status }}."
-    nuovo-job:
+  Nuovo-job:
       runs-on: ubuntu-latest
       steps:
         - run: echo "nuovo job"
